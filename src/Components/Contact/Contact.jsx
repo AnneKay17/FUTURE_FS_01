@@ -134,7 +134,7 @@ const Contact = () => {
                     
                     <h6 className='message-title'>
                         If you got any questions, <br/>
-                        please do not hesitate to send us a message
+                        please do not hesitate to send me a message
                     </h6>
 
                     {/* User inputs */}
