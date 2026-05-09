@@ -37,14 +37,6 @@
     background: rgba(255, 255, 255, 0.08);
 }
 
-/* Mobile layout adjustment */
-@media (max-width: 900px) {
-    .header {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
 /* Logo */
 .logo{
     font-size: 27px;
@@ -153,4 +145,12 @@
 
 .theme-switch input:checked + .slider::before {
     transform: translateX(24px);
+}
+
+/* Mobile layout adjustment */
+@media (max-width: 786px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
 }
