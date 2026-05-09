@@ -1,0 +1,223 @@
+.home{
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 140px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+   
+}
+
+/* Left text container */
+.home-info {
+    flex: 1;
+}
+
+/* Greeting text */
+.greeting{
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+/* Main name heading */
+.name{
+    font-size: clamp(2rem, 6vw, 5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    background: var(--heading-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Job title */
+.title{
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 25px;
+    color:#c084fc ;
+}
+
+/* Description */
+.home-description{
+    max-width: 550px;
+    line-height: 1.8;
+    opacity: 0.85;
+    margin-bottom: 40px;
+    font-size: 1rem;
+
+}
+/* Buttons */
+.home-buttons{
+    display: flex;
+    gap: 20px;
+}
+
+/* Button styling */
+.home-buttons a{
+    padding: 14px 28px;
+    border-radius: 40px;
+    color: white;
+    background: 
+        linear-gradient(
+            90deg,
+            #ff4ecd,
+            #9333ea
+        );
+
+    transition: 0.3s ease;
+}
+
+.home-buttons a:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 0 20px rgba(225, 78, 205, 0.4);
+}
+
+/* Right visual container */
+.home-visual{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.orbit-wrapper{
+    position: relative;
+
+    width: 420px;
+    height: 420px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glow-orb{
+    width: 220px;
+    height: 220px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,78,205,0.9),
+            rgba(147,51,234,0.45),
+            transparent 75%
+        );
+
+    filter: blur(8px);
+
+    position: relative;
+
+    animation:
+        floatOrb 6s ease-in-out infinite,
+        pulseGlow 4s ease-in-out infinite;
+}
+
+.orbit-ring{
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
+
+    animation: rotateOrbit 18s linear infinite;
+}
+
+@keyframes rotateOrbit{
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.ring-1{
+    animation-duration: 18s;
+}
+
+.ring-2{
+    animation-duration: 20s;
+}
+
+.ring-3{
+    animation-duration: 22s;
+}
+
+.ring-4{
+    animation-duration: 24s;
+}
+
+.ring-5{
+     animation-duration: 26s;
+}
+
+.orbit-icon img{
+    width: 38px;
+}
+
+.orbit-icon{
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.12);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(255,78,205,0.2);
+    transition:
+        transform 0.18s ease-out,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+@keyframes floatOrb{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes pulseGlow{
+    0%{
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.06);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column; /*On mobiles test appears first then visuals below*/
+        text-align: center;
+        padding: 120px 30px;
+        gap: 60px;
+    }
+}

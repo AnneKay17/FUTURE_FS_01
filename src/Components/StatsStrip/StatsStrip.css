@@ -1,0 +1,42 @@
+.stats-strip{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+
+    width: fit-content;
+
+    margin: 60px auto;
+
+    padding: 20px 35px;
+
+    border-radius: 50px;
+
+    background: rgba(255,255,255,0.05);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(12px);
+}
+
+.stats-strip span{
+    font-size: 0.95rem;
+    opacity: 0.85;
+    transition: 0.3s ease;
+}
+
+.stats-strip span:hover{
+    transform: translateY(-2px);
+    opacity: 1;
+}
+
+.dot{
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #c084fc;
+
+    box-shadow: 0 0 10px #c084fc;
+}

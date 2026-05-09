@@ -1,0 +1,7 @@
+.footer{
+    text-align: center;
+    padding: 40px;
+    margin-top: 80px;
+    color: var(--text-color);
+    opacity: 0.7;
+}

@@ -1,0 +1,173 @@
+.projects-section{
+    padding: 120px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    position: relative;
+}
+
+.projects-title{
+    text-align: center;
+}
+
+/*Quick Jump*/
+.project-index-card{
+    position: absolute;
+    left: 75%;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    padding: 15px;
+
+    border-radius: 18px;
+
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    z-index: 10;
+}
+
+.project-index-card p{
+    font-size: 12px;
+    opacity: 0.6;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.index-list{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.index-list button{
+    background: transparent;
+    border: none;
+
+    color: var(--text-color);
+    text-align: left;
+
+    padding: 6px 10px;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.index-list button:hover{
+    background: rgba(147,51,234,0.2);
+    transform: translateX(3px);
+}
+
+.index-list button.active{
+    background: rgba(147, 51, 234, 0.25);
+    border-left: 2px solid #c084fc;
+
+    box-shadow:
+        0 0 10px rgba(147, 51, 234, 0.25);
+
+    transform: translateX(5px);
+}
+
+
+
+ /*Deals with book operations*/
+.book-container{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    perspective: 1200px;
+}
+
+/*buttons*/
+.nav-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    padding-top: 20px;
+}
+
+.nav-buttons button{
+    min-width: 140px;
+    padding: 14px 24px;   
+    font-size: 16px;
+    font-weight: 500;     
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.15);
+    text-align: center;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-buttons button:hover{
+   transform: translateY(-4px);
+
+    box-shadow:
+        0 0 15px rgba(255, 78, 205, 0.4),
+        0 0 30px rgba(147, 51, 234, 0.3);
+
+    border: 1px solid rgba(255, 78, 205, 0.4);
+}
+
+.project-buttons button::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.project-buttons button:hover::before{
+    left: 100%;
+}
+
+@media (max-width: 768px) {
+
+    .project-index-card{
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+
+        width: auto;
+        margin-bottom: 20px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .index-list{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .index-list button{
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+}

@@ -1,0 +1,177 @@
+.contact-section{
+    margin: 0 auto;
+    padding: 120px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+
+}
+.contact-title{
+    text-align: center;
+    padding: 20px;
+}
+
+/* Main contact card container */
+.contact-block{
+    display: flex;
+    width: min(700px, 100%);
+    padding: 50px;
+    border-radius: 25px;
+    gap: 80px;
+    align-items: flex-start;
+    background: var(--card-bg);
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+    backdrop-filter: blur(12px);
+
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+    .contact-block {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Contact info items */
+.details{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+/* Hover effect */
+.details:hover{
+    transform: translateX(5px);
+    background: rgba(255,255,255,0.05);
+}
+
+/* Icons */
+.details img{
+    width: 30px;
+    filter: drop-shadow(0 0 8px rgba(192,132,252,0.4));
+}
+
+.details a{
+    font-weight: 100;
+}
+
+/*User message section*/
+.message-section{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    transition: all 0.3s ease;
+}
+
+.message-section h6{
+    text-align: center;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+/* Input fields */
+.message-section input,
+.user-message{
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: rgba(255,255,255,0.05);
+    color: var(--text-color);
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.user-message{
+    min-height: 160px;
+    resize: none;
+}
+
+/* Focus state */
+.message-section input:focus,
+.user-message:focus{
+    border: 1px solid rgba(147,51,234,0.5);
+    box-shadow: 0 0 15px rgba(147,51,234,0.2);
+}
+
+/* Button */
+.message-section button{
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(90deg, #ff4ecd, #9333ea);
+    color: white;
+    transition: 0.3s ease;
+}
+
+/* Hover */
+.message-section button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(255,78,205,0.4);
+}
+
+/* disabled state */
+.message-section button:disabled{
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.message-section button:disabled{
+    background: linear-gradient(90deg, #9333ea, #ff4ecd);
+    animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse{
+    0%{
+        box-shadow: 0 0 10px rgba(255,78,205,0.2);
+    }
+    50%{
+        box-shadow: 0 0 25px rgba(147,51,234,0.4);
+    }
+    100%{
+        box-shadow: 0 0 10px rgba(255,78,205,0.2);
+    }
+}
+
+.success-popup{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+
+    padding: 15px 20px;
+
+    border-radius: 12px;
+
+    background: rgba(0,0,0,0.6);
+
+    color: white;
+
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp{
+    from{
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

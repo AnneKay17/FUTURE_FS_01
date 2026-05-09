@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0; /*This changes my nav bar or at least i think*/
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    transition: all 0.8s ease;
+    --bg-gradient:
+        linear-gradient(
+            135deg,
+            #cd9ada 0%,
+            #f3e8ff 50%,
+            #e89ace 100%
+        );
+
+    --text-shadow :0 0 5px rgba(192, 132, 252, 0.5);
+    --text-color: #1f1f2e;
+
+    --card-bg: rgba(255,255,255,0.7);
+
+    --heading-gradient:
+        linear-gradient(
+            90deg,
+            #ff4ecd,
+            #9333ea
+        );
+}
+
+/* DARK MODE */
+body.dark-mode{
+    transition: all 0.8s ease;
+    --bg-gradient:
+        linear-gradient(
+            135deg,
+            #0f0f1a,
+            #1a1026,
+            #2b124c
+        );
+
+    --text-shadow : 0 0 5px rgba(231, 70, 201, 0.5);
+    --text-color: #f5f5f5;
+
+    --card-bg: rgba(255,255,255,0.05);
+
+    --heading-gradient:
+        linear-gradient(
+            90deg,
+            #ff4ecd,
+            #c084fc
+        );
+}
+
+body.dark-mode .header {
+    background: rgba(15, 15, 26, 0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body {
+  overflow-y:auto;
+  scroll-behavior: smooth;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text-color);
+  transition: background 0.8s ease, color 0.4s ease;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background: inherit;
+
+    z-index: -1;
+
+    transition: opacity 0.8s ease;
+}
+
+h1, h2,h3 {
+    background: var(--heading-gradient);
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-family: 'Space Grotesk', sans-serif;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.logo{
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+}
+
+
+/*Hides scroll bar*/
+body::-webkit-scrollbar{
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p, span, li, a{
+    color: var(--text-color);
+}
+

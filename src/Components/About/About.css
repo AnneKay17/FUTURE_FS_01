@@ -1,0 +1,152 @@
+.about-me {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 140px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+
+}
+
+/* Background glow effect */
+.about-me::before{
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    background: radial-gradient(circle, rgba(147,51,234,0.2), transparent);
+
+    filter: blur(80px);
+
+    z-index: -1;
+
+    top: 20%;
+    left: 10%;
+}
+
+/* Main container holding text, avatar, and card */
+.about-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+}
+
+.about-title{
+    text-align: center;
+}
+
+/* Left text section */
+.about-text{
+    flex: 1;
+}
+
+.description{
+    max-width: 500px;
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.8;
+    opacity: 0.85;
+}
+
+/* Middle visual section */
+.about-visual{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Animated avatar badge */
+.glow-avatar{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 42px;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, #ff4ecd, #9333ea);
+    box-shadow:
+        0 0 25px rgba(255, 78, 205, 0.4),
+        0 0 60px rgba(147, 51, 234, 0.3);
+
+    animation: floatAvatar 6s ease-in-out infinite;
+}
+
+/* Floating animation for avatar */
+@keyframes floatAvatar{
+    0%{ 
+        transform: translateY(0px); 
+    }
+    50%{ 
+        transform: translateY(-10px); 
+    }
+    100%{ 
+        transform: translateY(0px); 
+    }
+}
+
+/* Role label under avatar */
+.role-highlight{
+    font-size: 18px;
+    opacity: 0.85;
+    color: var(--text-color);
+}
+
+/* Right info card */
+.about-card{
+    flex: 1;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 30px rgba(0,0,0,0.2);
+}
+
+/* Card title */
+.about-card h3{
+    margin-bottom: 20px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #c084fc;
+}
+
+/* Card list */
+.about-card ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.about-card li{
+    font-size: 1rem;
+    opacity: 0.85;
+    line-height: 1.7;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .description{
+        text-align: center;
+    }
+}
+
