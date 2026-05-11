@@ -2,6 +2,10 @@
 
 An interactive and modern developer portfolio built with React, focused on smooth UI interactions, responsive layouts, and immersive frontend experiences.
 
+# 🌐 Live Demo
+
+[View Portfolio](https://future-fs-01-xi-ecru.vercel.app)
+
 ## ✨ Features
 
 * Responsive modern UI
