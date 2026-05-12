@@ -11,19 +11,15 @@ const StatsStrip = () => {
             variants={fadeUp}
         >
 
+            <span>Wits University</span>
+
+            <div className="dot"></div>
+
             <span>5+ Projects Built</span>
 
             <div className="dot"></div>
 
             <span>React Developer</span>
-
-            <div className="dot"></div>
-
-            <span>Computer Science Student</span>
-
-            <div className="dot"></div>
-
-            <span>UI & Systems Focused</span>
 
         </motion.section>
     );

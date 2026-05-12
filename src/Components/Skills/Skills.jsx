@@ -124,7 +124,7 @@ const Skills = () => {
                 {/* STRENGTHS */}
                 <div className="skills-block">
 
-                    <h3>Strengths</h3>
+                    <h3>Focus Areas</h3>
 
                     <div className="learning-areas">
 
@@ -149,7 +149,7 @@ const Skills = () => {
                 {/* CURRENTLY LEARNING */}
                 <div className="skills-block">
 
-                    <h3>Currently Learning</h3>
+                    <h3>Interests</h3>
 
                     <div className="learning-tags" variants={fadeUp}>
                         {currentlyLearning.map((item, index) => (

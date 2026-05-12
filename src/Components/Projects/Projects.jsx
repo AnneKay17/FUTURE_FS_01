@@ -32,7 +32,7 @@ const Projects = () => {
             title: "Portfolio Website",
             description: "An interactive developer portfolio focused on responsive design, smooth animations, and immersive frontend experiences using React.",
             tech: ["React", "CSS", "JavaScript"],
-            github: "https://github.com/yourname/portfolio",
+            github: "https://github.com/AnneKay17/FUTURE_FS_01.git",
             live: "https://your-portfolio.com"
         },
         {
@@ -47,7 +47,7 @@ const Projects = () => {
             image: img3,
             title: "Blog Website",
             description: "A responsive blog platform built to practice component architecture, layout structuring, and modern frontend UI development.",
-            tech: ["JavaScript","CSS","HTML"],
+            tech: ["JavaScript","CSS","React"],
             github: "https://github.com/yourname/portfolio",
             live: "https://your-portfolio.com"
         },

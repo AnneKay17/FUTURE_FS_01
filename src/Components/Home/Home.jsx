@@ -3,6 +3,7 @@ import Typed from "typed.js"; // For animated text effects
 import { motion } from "framer-motion"; // For page entrance animation
 import { useEffect, useRef } from "react";
 import { scaleFade} from "../../animations/motion";
+import CV from "../../../public/Karabo Anneta Makhubela CV.pdf";
 
 // Assets for orbiting tech icons
 import reactIcon from "../../assets/atom.png";
@@ -140,8 +141,8 @@ const Home = () => {
             </p>
 
             <div className="home-buttons">
-                <a href="#projects">View Projects</a>
-                <a href="#contact">Contact Me</a>
+                <a href="#projects" target="_blank" rel="noreferrer">View Projects</a>
+                <a href={CV}>View CV</a>
             </div>
 
         </div>
