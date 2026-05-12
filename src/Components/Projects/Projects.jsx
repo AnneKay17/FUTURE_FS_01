@@ -33,7 +33,7 @@ const Projects = () => {
             description: "An interactive developer portfolio focused on responsive design, smooth animations, and immersive frontend experiences using React.",
             tech: ["React", "CSS", "JavaScript"],
             github: "https://github.com/AnneKay17/FUTURE_FS_01.git",
-            live: "https://your-portfolio.com"
+            live: "future-fs-01-xi-ecru.vercel.app"
         },
         {
             image: img2,
